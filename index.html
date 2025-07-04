@@ -6,70 +6,103 @@
   <title>Jay Jagannath Health Club</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
-      background: radial-gradient(ellipse at center, #000000 0%, #111111 100%);
+      background: url('https://images.unsplash.com/photo-1583454110551-21c9baf64c1d?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
-      text-align: center;
     }
     header {
-      padding: 20px;
+      text-align: center;
+      padding: 60px 20px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      animation: fadeInDown 2s ease;
     }
     .logo {
-      width: 150px;
-      margin: 0 auto;
+      width: 120px;
       animation: pulse 3s infinite;
     }
     h1 {
-      font-size: 2.5rem;
-      color: #ffcc00;
+      font-size: 3rem;
+      color: #00ffe5;
+      text-shadow: 0 0 10px #00ffe5, 0 0 20px #00ffe5;
     }
     h2 {
-      color: #ff5733;
+      color: #ffc107;
       font-size: 1.5rem;
     }
     .slogan {
-      margin: 30px 0;
       font-size: 2rem;
       color: #00ff99;
+      margin: 20px 0;
+      text-shadow: 0 0 10px #00ff99;
     }
     .cta-buttons {
-      margin: 20px;
+      margin-top: 30px;
     }
     .cta-buttons button {
       font-size: 1rem;
       margin: 10px;
       padding: 15px 30px;
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
       cursor: pointer;
+      box-shadow: 0 0 15px #00ffe5;
+      transition: transform 0.3s;
+    }
+    .cta-buttons button:hover {
+      transform: scale(1.1);
     }
     .join {
-      background: #ff4500;
-      color: #fff;
+      background: #ff4081;
+      color: white;
     }
     .contact {
-      background: #333;
-      color: #ccc;
+      background: #673ab7;
+      color: white;
     }
     .features {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      margin-top: 40px;
+      padding: 40px 20px;
+      background: rgba(0,0,0,0.7);
     }
     .feature {
       margin: 20px;
       padding: 20px;
-      border-radius: 10px;
-      background: #1a1a1a;
-      box-shadow: 0 0 15px #222;
+      width: 200px;
+      border-radius: 12px;
+      background: #1f1f1f;
+      box-shadow: 0 0 20px #000;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+    .feature:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px #00ffe5;
     }
     footer {
-      margin-top: 40px;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
       font-size: 0.9rem;
       color: #aaa;
+      text-align: center;
+    }
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     @keyframes pulse {
       0% { transform: scale(1); }
@@ -83,126 +116,35 @@
     <img src="logo.png" alt="Jagannath Logo" class="logo" />
     <h1>JAY JAGANNATH HEALTH CLUB</h1>
     <h2>Where Fitness Meets Faith & Power!</h2>
-    <div class="slogan"><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jay Jagannath Health Club</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: radial-gradient(ellipse at center, #000000 0%, #111111 100%);
-      color: #fff;
-      text-align: center;
-    }
-    header {
-      padding: 20px;
-    }
-    .logo {
-      width: 150px;
-      margin: 0 auto;
-      animation: pulse 3s infinite;
-    }
-    h1 {
-      font-size: 2.5rem;
-      color: #ffcc00;
-    }
-    h2 {
-      color: #ff5733;
-      font-size: 1.5rem;
-    }
-    .slogan {
-      margin: 30px 0;
-      font-size: 2rem;
-      color: #00ff99;
-    }
-    .cta-buttons {
-      margin: 20px;
-    }
-    .cta-buttons button {
-      font-size: 1rem;
-      margin: 10px;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    .join {
-      background: #ff4500;
-      color: #fff;
-    }
-    .contact {
-      background: #333;
-      color: #ccc;
-    }
-    .features {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 40px;
-    }
-    .feature {
-      margin: 20px;
-      padding: 20px;
-      border-radius: 10px;
-      background: #1a1a1a;
-      box-shadow: 0 0 15px #222;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="logo.png" alt="Jagannath Logo" class="logo" />
-    <h1>JAY JAGANNATH HEALTH CLUB</h1>
-    <h2>Where Fitness Meets Faith & Power!</h2>
-    <div class="slogan">Transform Your Body. Honor Your Spirit</div>
+    <div class="slogan">No Pain No Gain</div>
     <div class="cta-buttons">
       <button class="join">Join Now</button>
       <button class="contact">Contact Us</button>
     </div>
   </header>
+
   <section class="features">
     <div class="feature">
       <h3>💪 Personal Training</h3>
+      <p>Customized 1-on-1 sessions for your body goals.</p>
     </div>
     <div class="feature">
       <h3>🧘 Group Classes</h3>
-    </div>
-  </section>
-  <footer>
-    NEAR MANCHANATH DEV HIGH SCHOOL, SAMEIGADIA, MANCHESWAR, BHUBANESWAR
-  </footer>
-</body>
-</html>
-</div>
-    <div class="cta-buttons">
-      <button class="join">Join Now</button>
-      <button class="contact">Contact Us</button>
-    </div>
-  </header>
-  <section class="features">
-    <div class="feature">
-      <h3>💪 Personal Training</h3>
+      <p>Zumba, Yoga, Cardio & more energetic group sessions.</p>
     </div>
     <div class="feature">
-      <h3>🧘 Group Classes</h3>
+      <h3>🏋️‍♂️ Modern Equipment</h3>
+      <p>Latest gym machines to maximize your workout efficiency.</p>
+    </div>
+    <div class="feature">
+      <h3>🍎 Nutrition Advice</h3>
+      <p>Get meal plans tailored to your fitness routine.</p>
     </div>
   </section>
+
   <footer>
-    NEAR MANCHANATH DEV HIGH SCHOOL, SAMEIGADIA, MANCHESWAR, BHUBANESWAR
+    NEAR MANCHANATH DEV HIGH SCHOOL, SAMEIGADIA, MANCHESWAR, BHUBANESWAR<br>
+    &copy; 2025 Jay Jagannath Health Club. All Rights Reserved.
   </footer>
 </body>
 </html>
