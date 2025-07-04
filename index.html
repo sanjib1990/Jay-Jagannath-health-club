@@ -148,3 +148,44 @@
   </footer>
 </body>
 </html>
+<!-- Full HTML content with form auto-submit to WhatsApp -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jay Jagannath Health Club</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    /* Existing styles preserved... */
+    .form-section form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
+  <script>
+    function submitToWhatsApp(event) {
+      event.preventDefault();
+      const name = document.querySelector('input[name="name"]').value;
+      const phone = document.querySelector('input[name="phone"]').value;
+      const message = document.querySelector('textarea[name="message"]').value;
+      const fullMessage = `New Gym Registration:%0AName: ${name}%0APhone: ${phone}%0AMessage: ${message}`;
+      window.open(`https://wa.me/919000000000?text=${fullMessage}`, '_blank');
+    }
+  </script>
+</head>
+<body>
+  <!-- header and features section unchanged -->
+  <section class="form-section">
+    <h2>Register Your Interest</h2>
+    <form onsubmit="submitToWhatsApp(event)">
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="tel" name="phone" placeholder="Phone Number" required><br>
+      <textarea name="message" placeholder="Your Message or Goal..." rows="4"></textarea><br>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+  <!-- map and footer unchanged -->
+</body>
+</html>
